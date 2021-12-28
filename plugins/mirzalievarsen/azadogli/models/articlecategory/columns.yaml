@@ -1,0 +1,6 @@
+columns:
+    name:
+        label: 'Название категории'
+        type: text
+        searchable: false
+        sortable: true

@@ -1,0 +1,45 @@
+{% if article %}
+    <div class="container">
+        <h1 class="main__page-header">
+            {{ article.title }}
+        </h1>
+        <div class="main--container">
+            <article class="article-viewer">
+                <div class="article-viewer-info">
+                    <svg role="img" class="icon">
+                        <use xlink:href="{{ 'assets/images/icons.svg#clock'| theme }}"></use>
+                    </svg>
+                    <span>
+                        {{ article.formating_date }}
+                    </span>
+                </div>
+                <span class="article-viewer-img">
+                    <span class="article-viewer-img__wrap">
+                        <picture class="lazy">
+                            <source media="(min-width: 1080px)" srcset="{{ article.image.path | resize(1200, 600,{ mode: 'fit',}) }}">
+                            <source media="(min-width: 820px)" srcset="{{ article.image.path | resize(820, 400, { mode: 'fit' })  }}">
+                            <source media="(min-width: 400px)" srcset="{{ article.image.path | resize(580, 300,{ mode: 'fit' }) }}">
+                            <img src="{{ article.image.path }}" alt="{{ article.image.title | resize(1200, 600, { mode: 'fit' }) }}">
+                                                                    </picture>
+                    </span>
+                </span>
+                <div class="main--article-content">
+                    {{ article.content | raw }}
+                </div>
+
+                <div class="article-viewer-footer">
+                    <div class="category">
+                        <span class="category__title">Категория</span>
+                        <a href="" class="category__link">
+                            <span>#</span>
+                            {{ article.category.name }}
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </div>
+{% else %}
+    <p>Не найдено</p>
+{% endif %}

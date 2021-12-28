@@ -1,0 +1,10 @@
+name: NewsController
+form: $/mirzalievarsen/content/models/news/fields.yaml
+modelClass: Mirzalievarsen\Content\Models\News
+defaultRedirect: mirzalievarsen/content/newscontroller
+create:
+    redirect: 'mirzalievarsen/content/newscontroller/update/:id'
+    redirectClose: mirzalievarsen/content/newscontroller
+update:
+    redirect: mirzalievarsen/content/newscontroller
+    redirectClose: mirzalievarsen/content/newscontroller

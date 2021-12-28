@@ -1,0 +1,15 @@
+plugin:
+    name: 'mirzalievarsen.azadogli::lang.plugin.name'
+    description: 'mirzalievarsen.azadogli::lang.plugin.description'
+    author: 'Mirzaliev Arsen'
+    icon: wn-icon-navicon
+navigation:
+    main-menu-item:
+        label: Новости
+        url: mirzalievarsen/azadogli/articlecontroller
+        icon: icon-newspaper-o
+        sideMenu:
+            side-menu-item2:
+                label: Категории
+                url: mirzalievarsen/azadogli/articlecategorycontroller
+                icon: icon-sitemap

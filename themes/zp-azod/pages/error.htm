@@ -1,0 +1,27 @@
+title = "Error page (500)"
+url = "/error/:name"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "MirzalievArsen\Content\Models\Docs"
+identifierValue = "{{ :name }}"
+modelKeyColumn = "id"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>{{ record.name }}</h1>
+        {% for docs in record.documents %}
+            <li>
+                <a href="">{{ docs. title }}</a>
+            </li>
+        {% endfor %}
+    </div>
+    
+    
+    
+</div>

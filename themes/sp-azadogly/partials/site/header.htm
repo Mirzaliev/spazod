@@ -1,0 +1,105 @@
+==
+function onStart()
+{
+    $this['backendUrl'] = Backend::url('/');
+}
+==
+
+{% partial 'site/vvi' %}
+
+<section id="topInfoBanner" class="top-info-banner">
+        <span class="top-info-banner__text" >
+            <a href="https://xn--80aesfpebagmfblc0a.xn--p1ai/" target="_blank">Профилактика коронавируса в районе</a>
+        </span>
+    <div class="top-info-banner-action">
+        <button id="hideTopBanner" class="close--button"></button>
+    </div>
+</section>
+
+<header class="header">
+    <section class="header-desktop">
+        <div class="container">
+            <div class="header-desktop-wrap">
+                <a href="/" class="site-logo" id="siteLogo">
+                    <img src="{{ 'assets/images/logo.png' | theme }}" class="site-logo__img" alt="">
+                    <h4 class="site-logo__title">Администрация<br>Сельского поселения<br>село Азадоглы</h4>
+                </a>
+                <div class="header-desktop-actions">
+                    <ul class="actions-list">
+                        <li>
+                            <a href="">
+                                <svg role="img" class="icon icon-svg-inst">
+                                    <use xlink:href="{{ 'assets/images/icons.svg#inst' | theme }}"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" id="showVVI" >
+                                <svg role="img" class="icon icon-svg-inst">
+                                    <use xlink:href="{{ 'assets/images/icons.svg#glasses' | theme }}"></use>
+                                </svg>
+                                <span>Версия для слабовидящих</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ 'feedback'|page }}">
+                                <svg  role="img" class="icon icon-svg-inst">
+                                    <use xlink:href="{{ 'assets/images/icons.svg#message' | theme }}"></use>
+                                </svg>
+                                <span>Написать письмо</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {% partial 'site/nav' %}
+        </div>
+    </section>
+    <section id="sectionHeaderMobile" class="header-mobile">
+        <div class="header-mobile-top">
+            <a href="/" class="site-logo">
+                <img src="{{ 'assets/images/logo.png' | theme }}" class="site-logo__img" alt="">
+                <h4 class="site-logo__title">Администрация<br>Сельского поселения<br>село Азадоглы</h4>
+            </a>
+            <button id="headerMobileOpen" class="header-mobile__open">
+                <svg  role="img" class="icon">
+                    <use xlink:href="{{ 'assets/images/icons.svg#burger' |theme }}"></use>
+                </svg>
+            </button>
+            <button id="headerMobileClose" class="close--button"></button>
+        </div>
+        <div class="header-mobile-content">
+            <nav id="headerMobileNav" class="header-mobile-nav">
+
+            </nav>
+            <div class="header-mobile-footer">
+                <ul class="actions-list">
+                    <li>
+                        <a href="">
+                            <svg role="img" class="icon icon-svg-inst">
+                                <use xlink:href="{{ 'assets/images/icons.svg#inst' | theme }}"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" id="showVVI">
+                            <svg role="img" class="icon icon-svg-inst">
+                                <use xlink:href="{{ 'assets/images/icons.svg#glasses' | theme }}"></use>
+                            </svg>
+                            <span>Версия для слабовидящих</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ 'feedback'|page }}">
+                            <svg  role="img" class="icon icon-svg-inst">
+                                <use xlink:href="{{ 'assets/images/icons.svg#message' | theme }}"></use>
+                            </svg>
+                            <span>Написать письмо</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</header>

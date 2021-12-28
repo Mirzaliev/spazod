@@ -1,0 +1,10 @@
+name: CategoryController
+form: $/mirzalievarsen/content/models/categories/fields.yaml
+modelClass: Mirzalievarsen\Content\Models\Categories
+defaultRedirect: mirzalievarsen/content/categorycontroller
+create:
+    redirect: 'mirzalievarsen/content/categorycontroller/update/:id'
+    redirectClose: mirzalievarsen/content/categorycontroller
+update:
+    redirect: mirzalievarsen/content/categorycontroller
+    redirectClose: mirzalievarsen/content/categorycontroller

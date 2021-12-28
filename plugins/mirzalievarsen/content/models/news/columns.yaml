@@ -1,0 +1,13 @@
+columns:
+    title:
+        label: Заголовок
+        type: text
+        searchable: true
+        sortable: true
+        width: 50%
+    category_id:
+        label: Категория
+        type: text
+        sortable: true
+        select: name
+        relation: category

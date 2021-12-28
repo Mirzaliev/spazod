@@ -1,0 +1,36 @@
+fields:
+    title:
+        label: Заголовок
+        span: auto
+        placeholder: 'Введите заголовок'
+        required: 1
+        type: text
+        comment: 'Обязательно заполните это поле!'
+    image:
+        label: 'Загрузите картинку'
+        mode: image
+        fileTypes: 'jpeg,jpg,png,svg,gif'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+        comment: 'Обязательно выберите картинку и как можно большого размера'
+    content:
+        label: Статья
+        size: giant
+        span: full
+        placeholder: 'Введите текст статьи'
+        required: 1
+        type: richeditor
+        commentAbove: 'Обязательно заполните это поле!'
+    category:
+        label: Категория
+        nameFrom: name
+        descriptionFrom: Категория
+        span: auto
+        required: 1
+        type: relation
+        comment: 'Обязательно заполните это поле!'

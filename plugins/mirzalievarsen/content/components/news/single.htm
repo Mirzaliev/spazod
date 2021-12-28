@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+
+            <!-- the actual blog post: title/author/date/content -->
+            <h1>{{ new.title }}</h1>
+            <p class="lead">by <a href="index.php">{{ new.category.name }}</a>
+            </p>
+            <hr>
+            <p>
+                <span class="glyphicon glyphicon-time"></span> {{ new.created_at | date("m/d/Y") }}</p>
+            <hr>
+            <img src="{{ new.preview.path }}" class="img-responsive">
+            <hr>
+            {{ new.content | raw }}
+            <ul>
+                <li><a href="http://spaceipsum.com/">Space Ipsum</a>
+                </li>
+                <li><a href="http://cupcakeipsum.com/">Cupcake Ipsum</a>
+                </li>
+                <li><a href="http://tunaipsum.com/">Tuna Ipsum</a>
+                </li>
+            </ul>
+
+            <hr>
+
+            <!-- the comment box -->
+            <div class="well">
+                <h4>Leave a Comment:</h4>
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+            <hr>
+
+        </div>
+    </div>
+</div>

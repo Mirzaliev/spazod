@@ -1,0 +1,62 @@
+title = "Написать письмо"
+url = "/feedback"
+layout = "default"
+is_hidden = 0
+
+==
+
+<div class="container">
+    <h1 class="main__page-header">Обратная связь</h1>
+    <div class="main--container feedback">
+        <div class="main-section">
+            <p>Поля, отмеченные *, обязательны для заполнения</p>
+            <p>Информация о&nbsp;персональных данных авторов обращений, направленных  в&nbsp;электронном виде, хранится и&nbsp;обрабатывается с&nbsp;соблюдением требований российского законодательства о&nbsp;персональных данных.</p>
+            <p>Подать обращение, по&nbsp;которому могут быть проведены мероприятия в&nbsp;соответствии с&nbsp;294-ФЗ, можно в&nbsp;данной форме, авторизовавшись через портал «Госуслуги» по&nbsp;ссылке:</p>
+            <a class="main__link" target="_blank" href="https://esia.gosuslugi.ru/login/">Авторизация через ЕСИА (портал «Госуслуги»)</a>
+
+            <form action="" class="main--form">
+                <fieldset class="main--form-group">
+                    <label for="fio">Фамилия  <i>*</i></label>
+                    <input class="main--form__control" required="" placeholder="Ввеедите фамилию" type="text" name="fio" id="fio">
+                </fieldset>
+                <fieldset class="main--form-group">
+                    <label for="name">Имя <i>*</i></label>
+                    <input class="main--form__control" type="text" required="" placeholder="Введите имя" name="name" id="name">
+                </fieldset>
+                <fieldset class="main--form-group">
+                    <label for="patronymic">Отчество  <i>*</i></label>
+                    <input class="main--form__control" type="text" required="" placeholder="Введите отчество" name="patronymic" id="patronymic">
+                </fieldset>
+
+                <fieldset class="main--form-group">
+                    <label for="email">Адрес эл. почты *<i>*</i></label>
+                    <small>Для получения ответа или уведомления о переадресации обращения</small>
+                    <input class="main--form__control" type="email" required="" placeholder="Укажите адрес эл. почты" name="email" id="email">
+                </fieldset>
+
+                <fieldset class="main--form-group">
+                    <label for="phone">Номер телефона  <i>*</i></label>
+                    <input class="main--form__control" type="text" required="" placeholder="Укажите номер телефона" name="phone" id="phone">
+                </fieldset>
+                <small>
+                    <p>В соответствии с частью 1 статьи 7 Федерального закона от 2 мая 2006 года № 59-ФЗ «О порядке рассмотрения обращений граждан Российской Федерации» гражданин в своем обращении в обязательном порядке излагает суть предложения, заявления или жалобы.</p>
+                    <p>Обращаем Ваше внимание, что в целях объективного и всестороннего рассмотрения Вашего обращения рекомендуется в тексте обращения указывать адрес описанного Вами места действия, факта или события. </p>
+                    <p>Обращаем Ваше внимание, что при написании текста обращения в форме электронного документа в поле ввода текста обращения в форме электронного документа для изложения сути предложения, заявления или жалобы отсутствует ограничение по вводимому количеству символов.</p>
+                </small>
+                <fieldset class="main--form-group">
+                    <label for="text">Текст обращения *<i>*</i></label>
+                    <small>Для получения ответа или уведомления о переадресации обращения</small>
+                    <textarea class="main--form__control" placeholder="Текст обращения" id="text" rows="10" maxlength="30000"></textarea>
+                </fieldset>
+
+                <fieldset class="main--form-group">
+                    <button type="submit" class="main--form__btn">Отправить обращение</button>
+                </fieldset>
+            </form>
+
+            <div class="feedback-success" style="display: none">
+                Обращение успешно отправлено!
+            </div>
+        </div>
+    </div>
+</div>

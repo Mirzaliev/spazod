@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table mirzalievarsen_azadogli_news'
+    - builder_table_create_mirzalievarsen_azadogli_news.php
+1.0.3:
+    - 'Updated table mirzalievarsen_azadogli_news'
+    - builder_table_update_mirzalievarsen_azadogli_news.php
+1.0.4:
+    - 'Created table mirzalievarsen_azadogli_article_categories'
+    - builder_table_create_mirzalievarsen_azadogli_article_categories.php
+1.0.5:
+    - 'Updated table mirzalievarsen_azadogli_news'
+    - builder_table_update_mirzalievarsen_azadogli_article.php
+1.0.6:
+    - 'Seeding'
+    - seed.php

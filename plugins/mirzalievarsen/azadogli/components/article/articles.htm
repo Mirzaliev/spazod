@@ -1,0 +1,24 @@
+<div class="container">
+    <h1 class="main__page-header">Новости</h1>
+    <section class="news page--news">
+        <div class="news-all-articles">
+            {% for article in articles  %}
+
+                <div class="news-every-article">
+                    <article class="news-article news-article_with-image">
+                        <div class="news-article-image">
+                            <a href="#" style="background-image: url({{ article.image.path }})"></a>
+                        </div>
+                        <div class="news-article-content">
+                            <small class="news-article__caption">{{ article.formating_date }}</small>
+                            <h2 class="news-article__title"><a href="">{{ article.title }}</a></h2>
+                            <p class="news-article__desc"><a href="">{{ (article.content |length > 300 ? article.content|slice(0, 300) ~ '...' : article.content) |striptags|raw }}</a></p>
+                        </div>
+                    </article>
+                </div>
+
+            {% endfor %}
+            {% partial "site/pagination" pag=articles %}
+        </div>
+    </section>
+</div>

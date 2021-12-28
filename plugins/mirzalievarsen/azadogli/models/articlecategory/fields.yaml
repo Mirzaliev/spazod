@@ -1,0 +1,8 @@
+fields:
+    name:
+        label: 'Название категории'
+        span: auto
+        placeholder: 'Введите название категории'
+        required: 1
+        type: text
+        comment: 'Обязательно заполните это поле!'

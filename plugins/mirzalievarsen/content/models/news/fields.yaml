@@ -1,0 +1,27 @@
+fields:
+    title:
+        label: Заголовок
+        span: auto
+        type: text
+    category:
+        label: Категория
+        nameFrom: name
+        descriptionFrom: slug
+        emptyOption: 'Выберите категорию'
+        span: auto
+        required: 1
+        type: relation
+    content:
+        label: Контент
+        size: giant
+        span: full
+        type: richeditor
+    preview:
+        label: Фотография
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

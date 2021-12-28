@@ -1,0 +1,22 @@
+{% if this.param['id'] %}
+   {% partial __SELF__~"::single" %}
+{% else %}
+<div class="row">
+    {% for new in news %}
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="{{ new.preview.thumb(350, 350)  }}" alt="...">
+            <div class="caption">
+                <h3>{{ str_limit(new.title, 50)   }}</h3>
+                <p>{{ str_limit(new.content, 100)  }}</p>
+                <p><a href="{{ 'news'| page({id: new.id}) }}" class="btn btn-primary" role="button">Button</a>
+                    <a href="#" class="btn btn-default" role="button">{{ new.category.name }}</a></p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+
+

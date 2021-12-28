@@ -1,0 +1,7 @@
+{% if this.page.id == 'index' %}
+   {% partial __SELF__~"::index" %}
+{% elseif this.page.id == 'articles' and this.param['id'] %}
+    {% partial __SELF__~"::article" %}
+{% else %}
+    {% partial __SELF__~"::articles" %}
+{% endif %}

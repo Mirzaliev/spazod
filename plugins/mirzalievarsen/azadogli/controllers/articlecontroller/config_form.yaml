@@ -1,0 +1,10 @@
+name: ArticleController
+form: $/mirzalievarsen/azadogli/models/article/fields.yaml
+modelClass: MirzalievArsen\Azadogli\Models\Article
+defaultRedirect: mirzalievarsen/azadogli/articlecontroller
+create:
+    redirect: 'mirzalievarsen/azadogli/articlecontroller/update/:id'
+    redirectClose: mirzalievarsen/azadogli/articlecontroller
+update:
+    redirect: mirzalievarsen/azadogli/articlecontroller
+    redirectClose: mirzalievarsen/azadogli/articlecontroller
