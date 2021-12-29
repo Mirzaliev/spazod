@@ -13,3 +13,12 @@ navigation:
                 label: Категории
                 url: mirzalievarsen/azadogli/articlecategorycontroller
                 icon: icon-sitemap
+    main-menu-item2:
+        label: Документы
+        url: mirzalievarsen/azadogli/documentcontoroller
+        icon: icon-file-text
+        sideMenu:
+            side-menu-item:
+                label: Разделы
+                url: mirzalievarsen/azadogli/docscategorycontroller
+                icon: icon-sitemap

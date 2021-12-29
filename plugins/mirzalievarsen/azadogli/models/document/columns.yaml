@@ -1,0 +1,13 @@
+columns:
+    custom_name:
+        label: Название
+        type: text
+    category_name:
+        label: Раздел
+        type: text
+        select: name
+        relation: category
+    file_info:
+        label: Информация о документе
+        type: partial
+        path: ~/plugins/mirzalievarsen/azadogli/models/document/_file_info.htm

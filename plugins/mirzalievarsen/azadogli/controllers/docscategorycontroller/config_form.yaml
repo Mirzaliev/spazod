@@ -1,0 +1,10 @@
+name: DocsCategoryController
+form: $/mirzalievarsen/azadogli/models/docscategory/fields.yaml
+modelClass: MirzalievArsen\Azadogli\Models\DocsCategory
+defaultRedirect: mirzalievarsen/azadogli/docscategorycontroller
+create:
+    redirect: 'mirzalievarsen/azadogli/docscategorycontroller/update/:id'
+    redirectClose: mirzalievarsen/azadogli/docscategorycontroller
+update:
+    redirect: mirzalievarsen/azadogli/docscategorycontroller
+    redirectClose: mirzalievarsen/azadogli/docscategorycontroller

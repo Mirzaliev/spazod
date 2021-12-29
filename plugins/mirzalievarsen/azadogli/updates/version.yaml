@@ -13,5 +13,11 @@
     - 'Updated table mirzalievarsen_azadogli_news'
     - builder_table_update_mirzalievarsen_azadogli_article.php
 1.0.6:
-    - 'Seeding'
+    - 'Created table mirzalievarsen_azadogli_docs'
+    - builder_table_create_mirzalievarsen_azadogli_docs.php
+1.0.7:
+    - 'Created table mirzalievarsen_azadogli_docs_categories'
+    - builder_table_create_mirzalievarsen_azadogli_docs_categories.php
+1.0.100:
+    - Seeding
     - seed.php

@@ -1,0 +1,25 @@
+fields:
+    category:
+        label: Раздел
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        required: 1
+        type: relation
+        comment: 'Укажите к какому разделу относится документ'
+    file:
+        label: 'Добавьте документ'
+        oc.commentPosition: below
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 1
+        type: fileupload
+    custom_name:
+        label: 'Название документа'
+        span: full
+        type: text
+        comment: 'Если не указывается, имя файла используется в качестве названия'

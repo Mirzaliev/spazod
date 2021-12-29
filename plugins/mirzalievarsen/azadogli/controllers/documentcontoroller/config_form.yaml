@@ -1,0 +1,10 @@
+name: DocumentContoroller
+form: $/mirzalievarsen/azadogli/models/document/fields.yaml
+modelClass: MirzalievArsen\Azadogli\Models\Document
+defaultRedirect: mirzalievarsen/azadogli/documentcontoroller
+create:
+    redirect: 'mirzalievarsen/azadogli/documentcontoroller/update/:id'
+    redirectClose: mirzalievarsen/azadogli/documentcontoroller
+update:
+    redirect: mirzalievarsen/azadogli/documentcontoroller
+    redirectClose: mirzalievarsen/azadogli/documentcontoroller

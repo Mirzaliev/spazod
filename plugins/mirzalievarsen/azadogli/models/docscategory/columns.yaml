@@ -1,0 +1,8 @@
+columns:
+    name:
+        label: Раздел
+        type: text
+        searchable: true
+        invisible: false
+        sortable: true
+        width: '50'

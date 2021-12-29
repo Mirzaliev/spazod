@@ -1,0 +1,17 @@
+fields:
+    name:
+        label: 'Название раздела'
+        span: auto
+        placeholder: 'Введите название раздела'
+        required: 1
+        type: text
+    slug:
+        label: 'Уникальная строка идентификатор'
+        span: auto
+        disabled: 0
+        readOnly: 1
+        preset:
+            field: name
+            type: slug
+        type: text
+        comment: 'Автоматически создается'

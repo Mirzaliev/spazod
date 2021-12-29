@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'debug' => true,
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'url' => 'http://spazaduj.beget.tech/',
+    'url' => env('APP_URL', 'http://spazaduj.beget.tech/'),
 
     /*
     |--------------------------------------------------------------------------
@@ -198,7 +198,7 @@ return [
     |
     */
 
-    'key' => '8BjBmZrq1njhg0XFZN2ga7jeJ9qtA11Q',
+    'key' => env('APP_KEY', ''),
 
     'cipher' => 'AES-256-CBC',
 
