@@ -9,9 +9,10 @@ fields:
         comment: 'Укажите к какому разделу относится документ'
     file:
         label: 'Добавьте документ'
-        oc.commentPosition: below
         mode: file
-        useCaption: true
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: 1
         thumbOptions:
             mode: crop
             extension: auto

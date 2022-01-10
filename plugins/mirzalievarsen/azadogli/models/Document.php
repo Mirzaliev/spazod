@@ -3,6 +3,7 @@
 use MirzalievArsen\Azadogli\Classes\Helpers;
 use Model;
 use System\Models\File;
+use Winter\Storm\Support\Facades\Flash;
 
 /**
  * Model
@@ -21,14 +22,19 @@ class Document extends Model
     /**
      * @var array Validation rules
      */
-    public $rules = [
-        'file'                 => 'required',
-    ];
+
 
     public $attachOne = [
         'file' => File::class
     ];
 
+    public $fillable = [
+        'custom_name'
+    ];
+
+    public $rules = [
+        'file' => 'required',
+   ];
     public $customMessages = [
         'file.required'    => 'Похоже вы забыли добавить файл!',
     ];
@@ -38,14 +44,15 @@ class Document extends Model
     }
 
     public function getFileSizeAttribute() {
-        //return Helpers::formatSizeUnits($this->file->file_size);
+        return Helpers::formatSizeUnits($this->file->file_size);
     }
 
-    public function afterCreate()
+    public function afterFetch()
     {
         if(empty($this->custom_name)){
-            $this->custom_name = '60222';
-            $this->save();
+            $this->update([
+                'custom_name' => $this->file->file_size
+            ]);
         }
     }
 
