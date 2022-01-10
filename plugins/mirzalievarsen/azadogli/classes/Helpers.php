@@ -54,4 +54,9 @@ class Helpers {
 
         return $bytes;
     }
+
+    static function removeFileExtention(string $fileName): string
+    {
+        return substr($fileName, 0, strrpos($fileName,'.'));
+    }
 }

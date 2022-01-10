@@ -22,3 +22,7 @@ navigation:
                 label: Разделы
                 url: mirzalievarsen/azadogli/docscategorycontroller
                 icon: icon-sitemap
+    main-menu-item3:
+        label: Обращения
+        url: mirzalievarsen/azadogli/feedbackcontroller
+        icon: icon-life-ring

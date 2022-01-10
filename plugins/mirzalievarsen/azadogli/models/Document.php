@@ -51,10 +51,11 @@ class Document extends Model
     {
         if(empty($this->custom_name)){
             $this->update([
-                'custom_name' => $this->file->file_size
+                'custom_name' => Helpers::removeFileExtention($this->file->file_name)
             ]);
         }
     }
+
 
 
     public $belongsTo = [
