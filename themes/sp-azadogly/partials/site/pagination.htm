@@ -1,12 +1,20 @@
-{% set totalPage = 11  %}
+{% set totalPage = pag.lastPage()  %}
 {% set currentPage = pag.currentPage() %}
 {% set startLoop = currentPage >= 7 ? totalPage <= 10 ? 1 : currentPage - 5 : 1  %}
 {% set endloop = currentPage >= 7 ? ((currentPage + 4) > totalPage ? totalPage : currentPage + 4)  : totalPage > 10 ? 10 : totalPage  %}
 
+{% if pag.total() > 0 %}
+
+{% if totalPage > 1 %}
+
 <ul class="main--pagination">
     {% for p in startLoop..endloop %}
-        <li class="main--pagination__page {{ p == currentPage ? 'main--pagination__page_active': '' }}">
-            <a href="/articles?page={{ p }}">{{ p }}</a>
-        </li>
+    <li class="main--pagination__page {{ p == currentPage ? 'main--pagination__page_active': '' }}">
+        <a href="{{ pag.url(p) }}">{{ p }}</a>
+    </li>
     {% endfor %}
 </ul>
+
+{% endif %}
+
+{% endif %}

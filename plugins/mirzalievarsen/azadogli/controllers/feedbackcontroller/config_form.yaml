@@ -1,0 +1,10 @@
+name: FeedbackController
+form: $/mirzalievarsen/azadogli/models/feedback/fields.yaml
+modelClass: MirzalievArsen\Azadogli\Models\Feedback
+defaultRedirect: mirzalievarsen/azadogli/feedbackcontroller
+create:
+    redirect: 'mirzalievarsen/azadogli/feedbackcontroller/update/:id'
+    redirectClose: mirzalievarsen/azadogli/feedbackcontroller
+update:
+    redirect: mirzalievarsen/azadogli/feedbackcontroller
+    redirectClose: mirzalievarsen/azadogli/feedbackcontroller

@@ -1,0 +1,26 @@
+columns:
+    surname:
+        label: ФИО
+        type: partial
+        sortable: false
+        width: 20%
+        path: ~/plugins/mirzalievarsen/azadogli/models/feedback/_fio_info.htm
+    email:
+        label: 'Эл. почта'
+        type: text
+        searchable: false
+        width: 15%
+    phone:
+        label: Телефон
+        type: text
+        searchable: false
+        width: 15%
+    message:
+        label: Сообщение
+        type: partial
+        width: 50%
+        path: ~/plugins/mirzalievarsen/azadogli/models/feedback/_message_info.htm
+    created_at:
+        label: Отправлено
+        type: datetime
+        sortable: true

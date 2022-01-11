@@ -1,0 +1,11 @@
+{% if this.page.id == 'index' %}
+    {% partial __SELF__~"::index" %}
+{% else %}
+    <ul>
+        {% for user in docs %}
+        <li>{{ user.custom_name }}</li>
+        {% endfor %}
+    </ul>
+    {% partial "site/pagination" pag=docs %}
+     {{docs| length }}
+{% endif %}

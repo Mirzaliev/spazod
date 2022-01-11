@@ -25,4 +25,4 @@ navigation:
     main-menu-item3:
         label: Обращения
         url: mirzalievarsen/azadogli/feedbackcontroller
-        icon: icon-life-ring
+        icon: icon-bullhorn
