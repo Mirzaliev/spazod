@@ -1,0 +1,47 @@
+description = "static-layoutt"
+
+[staticPage]
+useContent = 1
+default = 0
+==
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>СП Азадоглы - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Mirzaliev Arsen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="CMS">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/favicon-16x16.png'|theme }}">
+        <link href="{{ 'assets/css/all.css' |theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <main class="main">
+            {% page %}
+        </main>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        <!-- Scripts -->
+
+        <script src="{{ 'assets/js/all.js'|theme }}"></script>
+        <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

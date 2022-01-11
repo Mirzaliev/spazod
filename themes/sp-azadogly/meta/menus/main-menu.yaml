@@ -1,0 +1,24 @@
+items:
+    -
+        title: Главная
+        type: url
+        url: /
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Администрация
+        nesting: 1
+        type: static-page
+        url: null
+        code: ''
+        reference: administraciya
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Основное меню'

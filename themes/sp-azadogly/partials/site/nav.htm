@@ -1,4 +1,9 @@
-<nav class="header-desktop-nav nav-module">
+[viewBag]
+
+[staticMenu]
+code = "main-menu"
+==
+<!-- <nav class="header-desktop-nav nav-module">
     <ul id="navModuleList" class="nav-module-list">
 
 
@@ -167,4 +172,155 @@
 
     </ul>
 </nav>
+ -->
+<nav class="header-desktop-nav nav-module">
+    <ul id="navModuleList" class="nav-module-list">
 
+       {% for item in staticMenu.menuItems %}
+        <li class="nav-module__item {{  item.isChildActive or item.isActive   ? 'nav-module__item_active' : '' }}">
+            <a href="{{ item.url }}" class="nav-module__link">{{ item.title }}</a>
+
+            {% if item.items %}
+                <div class="nav-module-dropdown nav-module-dropdown_left">
+                    <ul class="nav-module-dropdown-links nav-module_only-desktop">
+                        {% for child in item.items %}
+                            <li class="nav-module-dropdown__link {{  child.isActive  ? 'nav-module-dropdown__link_active' : '' }}">
+                                <a href="{{ child.url }}">{{ child.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+        </li>
+        {% endfor %}
+
+        <li class="nav-module__item {{  this.page.id == ''  ? 'nav-module__item_active' : '' }}">
+            <a href="#" class="nav-module__link">Собрание депутатов</a>
+
+
+
+            <div class="nav-module-dropdown">
+                <ul class="nav-module-dropdown-links nav-module_only-desktop">
+
+
+                    <li class="nav-module-dropdown__link"><a href="#">Депутаты</a></li>
+
+                    <li class="nav-module-dropdown__link"><a href="#">Решения Собрания</a></li>
+
+                    <li class="nav-module-dropdown__link"><a href="#">График приёма</a></li>
+
+                    <li class="nav-module-dropdown__link"><a href="#">Проекты решений Собрания</a></li>
+
+
+                </ul>
+            </div>
+
+        </li>
+
+        <li class="nav-module__item {{  this.page.id == 'municipal-municipal_subs'  ? 'nav-module__item_active' : '' }}">
+            <a href="{{ 'municipal/municipal_subs' | page }}" class="nav-module__link">Муниципальные правовые акты</a>
+
+
+
+            <div class="nav-module-dropdown nav-module-dropdown_center">
+                <ul class="nav-module-dropdown-links nav-module_only-desktop">
+
+
+                    <li class="nav-module-dropdown__link {{  this.param.name == 'ustav-poseleniya' ? 'nav-module-dropdown__link_active' : ''  }}">
+                        <a href="{{ 'municipal/municipal_subs' | page({ name : 'ustav-poseleniya' }) }}">Устав поселения</a>
+                    </li>
+
+                    <li class="nav-module-dropdown__link {{   this.param.name  == 'resheniya-sobraniya'  ? 'nav-module-dropdown__link_active' : '' }}">
+                        <a href="{{ 'municipal/municipal_subs' | page({ name : 'resheniya-sobraniya' }) }}">Решения Собрания</a>
+                    </li>
+
+                    <li class="nav-module-dropdown__link {{   this.param.name  == 'administrativnye-reglamenty'  ? 'nav-module-dropdown__link_active' : '' }}">
+                        <a href="{{ 'municipal/municipal_subs' | page({ name : 'administrativnye-reglamenty' }) }}">Административные регламенты</a>
+                    </li>
+
+                    <li class="nav-module-dropdown__link {{  this.param.name  == 'rasporyazheniya'  ? 'nav-module-dropdown__link_active' : ''}}">
+                        <a href="{{ 'municipal/municipal_subs' | page({ name : 'rasporyazheniya' }) }}">Распоряжения</a>
+                    </li>
+
+                    <li class="nav-module-dropdown__link {{  this.param.name  == 'postanovleniya'  ? 'nav-module-dropdown__link_active' : '' }}">
+                        <a href="{{ 'municipal/municipal_subs' | page({ name : 'postanovleniya' }) }}">Постановления</a>
+                    </li>
+
+                    <li class="nav-module-dropdown__link {{  this.param.name  == 'programmy'  ? 'nav-module-dropdown__link_active' : ''}}">
+                        <a href="{{ 'municipal/municipal_subs' | page({ name : 'programmy' }) }}">Программы</a>
+                    </li>
+
+                    <li class="nav-module-dropdown__link {{   this.param.name  == 'publichnye-slushaniya'  ? 'nav-module-dropdown__link_active' : '' }}">
+                        <a href="{{ 'municipal/municipal_subs' | page({ name : 'publichnye-slushaniya' }) }}">Публичные слушания</a>
+                    </li>
+
+                    <li class="nav-module-dropdown__link {{  this.param.name  == 'proekty-dokumentov'  ? 'nav-module-dropdown__link_active' : ''}}">
+                        <a href="{{ 'municipal/municipal_subs' | page({ name : 'proekty-dokumentov' }) }}">Проекты документов</a>
+                    </li>
+
+                    <li class="nav-module-dropdown__link {{   this.param.name  == 'poryadok-obzhalovaniya-npa'  ? 'nav-module-dropdown__link_active' : '' }}">
+                        <a href="{{ 'municipal/municipal_subs' | page({ name : 'poryadok-obzhalovaniya-npa' }) }}">Порядок обжалования НПА</a>
+                    </li>
+
+                    <li class="nav-module-dropdown__link {{   this.param.name  == 'soglasheniya'  ? 'nav-module-dropdown__link_active' : '' }}">
+                        <a href="{{ 'municipal/municipal_subs' | page({ name : 'soglasheniya' }) }}">Соглашения</a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </li>
+
+        <li class="nav-module__item {{  this.page.id == ''  ? 'nav-module__item_active' : '' }}">
+            <a href="#" class="nav-module__link">Бюджет для граждан</a>
+
+
+
+            <div class="nav-module-dropdown nav-module-dropdown_left">
+                <ul class="nav-module-dropdown-links nav-module_only-desktop">
+
+
+                    <li class="nav-module-dropdown__link"><a href="#">Бюджет для граждан</a></li>
+
+                    <li class="nav-module-dropdown__link"><a href="#">Бюджет поселения</a></li>
+
+                    <li class="nav-module-dropdown__link"><a href="#">Отчеты об исполнении бюджета</a></li>
+
+                    <li class="nav-module-dropdown__link"><a href="#">Кадровый резерв</a></li>
+
+                    <li class="nav-module-dropdown__link"><a href="#">Протоколы</a></li>
+
+                    <li class="nav-module-dropdown__link"><a href="#">Заключения</a></li>
+
+                    <li class="nav-module-dropdown__link"><a href="#">Целевые программы</a></li>
+
+                    <li class="nav-module-dropdown__link"><a href="#">Управленческий резерв</a></li>
+
+
+                </ul>
+            </div>
+
+        </li>
+
+        <li class="nav-module__item hidden-wide {{  this.page.id == 'articles'  ? 'nav-module__item_active' : '' }}">
+            <a href="{{ 'articles'|page }}" class="nav-module__link">Новости</a>
+
+        </li>
+
+        <li class="nav-module__item hidden-extra {{  this.page.id == 'contacts'  ? 'nav-module__item_active' : '' }}">
+            <a href="{{ 'contacts'|page }}" class="nav-module__link">Контакты</a>
+        </li>
+
+
+        <li class="nav-module__item_adaptive">
+            <span class="nav-module__link">Еще</span>
+            <div class="nav-module__item_adaptive-list">
+                <a href="#" class="nav-module__item_adaptive__item show-wide">Бюджет для меня</a>
+                <a href="#" class="nav-module__item_adaptive__item show-extra">Еще меню</a>
+            </div>
+        </li>
+
+    </ul>
+</nav>
