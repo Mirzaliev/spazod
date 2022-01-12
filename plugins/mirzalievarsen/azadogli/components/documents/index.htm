@@ -2,21 +2,24 @@
     <div class="container">
         <h2 class="main__interim-header">Посдение документы</h2>
         <div class="main--document-list">
-            {% for d in docs  %}
-                <a href="" class="main--document" title="Нажмите чтобы открыть документ">
-                    <svg role="img" class="icon icon-svg-inst">
-                        <use xlink:href="http://127.0.0.1:8000/themes/sp-azadogly/assets/images/icons.svg#documents"></use>
-                    </svg>
-                    <span class="main--document-info">
-                                         <span class="main--document__title">{{  d.custom_name|length > 180 ?  d.custom_name|slice(0, 180) ~ '...' :  d.custom_name }}</span>
-                                        <span class="main--document-labels">
-                                            <span class="main--document__label">{{ d.formating_date }}</span>
-                                            <span class="main--document__label size">{{ d.file.extension }}, {{ d.file_size }}</span>
-                                        </span>
-                                   </span>
-                </a>
-
-            {% endfor %}
+            {% if docs|length > 0 %}
+                {% for d in docs  %}
+                    <a href="" class="main--document" title="Нажмите чтобы открыть документ">
+                        <svg role="img" class="icon icon-svg-inst">
+                            <use xlink:href="http://127.0.0.1:8000/themes/sp-azadogly/assets/images/icons.svg#documents"></use>
+                        </svg>
+                        <span class="main--document-info">
+                                             <span class="main--document__title">{{  d.custom_name|length > 180 ?  d.custom_name|slice(0, 180) ~ '...' :  d.custom_name }}</span>
+                                            <span class="main--document-labels">
+                                                <span class="main--document__label">{{ d.formating_date }}</span>
+                                                <span class="main--document__label size">{{ d.file.extension }}, {{ d.file_size }}</span>
+                                            </span>
+                                       </span>
+                    </a>
+                {% endfor %}
+            {% else %}
+                <p>Пока нет документов</p>
+            {% endif %}
 
         </div>
         <a class="main__all-view-link" href="{{ 'municipal/municipal_subs' | page }}">

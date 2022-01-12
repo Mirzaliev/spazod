@@ -1,11 +1,40 @@
 {% if this.page.id == 'index' %}
     {% partial __SELF__~"::index" %}
 {% else %}
-    <ul>
-        {% for user in docs %}
-        <li>{{ user.custom_name }}</li>
-        {% endfor %}
-    </ul>
-    {% partial "site/pagination" pag=docs %}
-     {{docs| length }}
+
+
+    {% if docs| length > 0 %}
+        <div class="main--container">
+            <div class="main-section">
+                <div class="main--document-list">
+                    {% for doc in docs %}
+
+                        <a href="{{ 'download-file'|page({'id': doc.file.id}) }}" class="main--document" title="Нажмите чтобы открыть документ">
+                            <svg role="img" class="icon icon-svg-inst">
+                                <use xlink:href="{{ 'assets/images/icons.svg#documents' |theme }}"></use>
+                            </svg>
+                            <span class="main--document-info">
+
+                                <span class="main--document__title">{{ doc.custom_name }}</span>
+
+
+                                                <span class="main--document-labels">
+                                                    <span class="main--document__label">Добавлен: {{ doc.formating_date}}</span>
+                                                    <span class="main--document__label size">{{doc.file.extension }},{{ doc.file_size }}</span>
+                                                </span>
+                                           </span>
+                        </a>
+                    {% endfor %}
+                </div>
+                {% partial "site/pagination" pag=docs %}
+            </div>
+         </div>
+
+    {% else %}
+
+        {% partial "site/404" %}
+
+    {% endif %}
+
+
 {% endif %}

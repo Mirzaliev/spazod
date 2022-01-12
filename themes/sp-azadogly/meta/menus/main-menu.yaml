@@ -21,4 +21,155 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+    -
+        title: 'Собрание депутатов'
+        nesting: 1
+        type: static-page
+        url: null
+        code: ''
+        reference: sobranie-deputatov
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Муниципальные правовые акты'
+        type: url
+        url: /municipal
+        code: municipal
+        viewBag:
+            isHidden: '0'
+            cssClass: nav-module-dropdown_center
+            isExternal: '0'
+        items:
+            -
+                title: 'Устав поселения'
+                nesting: null
+                type: url
+                url: /municipal/ustav-poseleniya
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Административные регламенты'
+                nesting: null
+                type: url
+                url: /municipal/administrativnye-reglamenty
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Распоряжения
+                nesting: null
+                type: url
+                url: /municipal/rasporyazheniya
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Постановления
+                nesting: null
+                type: url
+                url: /municipal/postanovleniya
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Программы
+                nesting: null
+                type: url
+                url: /municipal/programmy
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Публичные слушания'
+                nesting: null
+                type: url
+                url: /municipal/publichnye-slushaniya
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Проекты документов'
+                nesting: null
+                type: url
+                url: /municipal/proekty-dokumentov
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Порядок обжалования НПА'
+                nesting: null
+                type: url
+                url: /municipal/poryadok-obzhalovaniya-npa
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Соглашения
+                nesting: null
+                type: url
+                url: /municipal/soglasheniya
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Бюджет для граждан'
+        nesting: 1
+        type: static-page
+        code: ''
+        reference: byudzhet-dlya-grazhdan
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: nav-module-dropdown_left
+            isExternal: '0'
 name: 'Основное меню'

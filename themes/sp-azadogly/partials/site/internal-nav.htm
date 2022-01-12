@@ -1,0 +1,20 @@
+[staticMenu]
+code = "main-menu"
+
+==
+<div class="container">
+    <h1 class="main__page-header">{{ this.page.title }}</h1>
+    <nav class="main--internal-nav">
+        <ul>
+            {% for item in staticMenu.menuItems %}
+            {% if item.isActive == true or item.isChildActive == true and item.items|length > 0 %}
+            {% for child in item.items %}
+            <li class="{{  child.isActive  ? 'active' : '' }}">
+                <a href="{{ child.url }}">{{ child.title }}</a>
+            </li>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,20 @@
+title = "Загрузка документы"
+url = "/download-file/:id"
+is_hidden = 0
+==
+<?php
+function onStart() {
+    $fileId = $this->param('id');
+    $file = \System\Models\File::find($fileId);
+    // for security please check attachment_type == your model with namespace
+    // only then lat use download file other wise user can download all the files by just passing id
+    if($file && $file->attachment_type == 'MirzalievArsen\Azadogli\Models\Document' ||  $file->attachment_type == 'MirzalievArsen\Azadogli\Models\Article') { // here add your relation model name space for comparison
+      $file->output('attachment');  
+    }
+    else {
+      echo $fileId;
+    }
+    exit();
+}
+?>
+==

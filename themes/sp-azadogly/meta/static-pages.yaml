@@ -2,3 +2,23 @@ static-pages:
     administraciya:
         administraciya-glava-administracii: {  }
         administraciya-polnomochiya-zadachi-i-funkcii: {  }
+        administraciya-struktura: {  }
+        administraciya-municipalnaya-sluzhba: {  }
+        administraciya-municipalnyj-kontrol: {  }
+        administraciya-podvedomstvennye-organizacii: {  }
+        administraciya-municipalnoe-zadanie: {  }
+        administraciya-perechen-bankov-dannyh-reestrov-registrov: {  }
+    sobranie-deputatov:
+        sobranie-deputatov-deputaty: {  }
+        sobranie-deputatov-deputaty-resheniya-sobraniya: {  }
+        sobranie-deputatov-grafik-priyoma: {  }
+        sobranie-deputatov-proekty-reshenij-sobraniya: {  }
+    byudzhet-dlya-grazhdan:
+        byudzhet-dlya-grazhdan-byudzhet-dlya-grazhdan: {  }
+        byudzhet-dlya-grazhdan-byudzhet-poseleniya: {  }
+        byudzhet-dlya-grazhdan-otchety-ob-ispolnenii-byudzheta: {  }
+        byudzhet-dlya-grazhdan-kadrovyj-rezerv: {  }
+        byudzhet-dlya-grazhdan-protokoly: {  }
+        byudzhet-dlya-grazhdan-zaklyucheniya: {  }
+        byudzhet-dlya-grazhdan-celevye-programmy: {  }
+        byudzhet-dlya-grazhdan-upravlencheskij-rezerv: {  }

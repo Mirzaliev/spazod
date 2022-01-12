@@ -1,8 +1,11 @@
-description = "static-layoutt"
+description = "static-layout"
 
 [staticPage]
 useContent = 1
 default = 0
+
+[staticMenu]
+code = "main-menu"
 ==
 <!DOCTYPE html>
 <html lang="ru">
@@ -28,7 +31,17 @@ default = 0
 
         <!-- Content -->
         <main class="main">
-            {% page %}
+            {% partial 'site/internal-nav' %}
+            <div class="container">
+                <div class="main--article-content">
+                    {% if staticPage.content %}
+                        {% page %}
+                    {% else %}
+                         {% partial "site/404" %}
+                    {% endif %}
+
+                </div>
+            </div>
         </main>
 
         <!-- Footer -->
