@@ -13,11 +13,7 @@ class ArticleController extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('MirzalievArsen.Azadogli', 'main-menu-item');
+        BackendMenu::setContext('MirzalievArsen.Azadogli', 'main-menu-item', 'side-menu-item');
     }
 
-    public function listExtendQuery($query)
-    {
-        $query->where('article_category_id', 2);
-    }
 }

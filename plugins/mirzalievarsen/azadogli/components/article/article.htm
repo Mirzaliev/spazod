@@ -16,10 +16,10 @@
                 <span class="article-viewer-img">
                     <span class="article-viewer-img__wrap">
                         <picture class="lazy">
-                            <source media="(min-width: 1080px)" srcset="{{ article.image.path | resize(1200, 600,{ mode: 'fit',}) }}">
-                            <source media="(min-width: 820px)" srcset="{{ article.image.path | resize(820, 400, { mode: 'fit' })  }}">
-                            <source media="(min-width: 400px)" srcset="{{ article.image.path | resize(580, 300,{ mode: 'fit' }) }}">
-                            <img src="{{ article.image.path }}" alt="{{ article.image.title | resize(1200, 600, { mode: 'fit' }) }}">
+                            <source media="(min-width: 1080px)" srcset="{{ article.image.path | resize(980, 550,{ mode: 'crop',}) }}">
+                            <source media="(min-width: 820px)" srcset="{{ article.image.path | resize(820, 400, { mode: 'crop' })  }}">
+                            <source media="(min-width: 400px)" srcset="{{ article.image.path | resize(580, 300,{ mode: 'crop' }) }}">
+                            <img src="{{ article.image.path }}" alt="{{ article.image.title | resize(1200, 600, { mode: 'crop' }) }}">
                                                                     </picture>
                     </span>
                 </span>

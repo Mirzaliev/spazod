@@ -6,14 +6,15 @@
                     <div class="main-news">
                         <article class="news-article news-article_with-image">
                             <div class="news-article-image">
-                                <a href="#" style="background-image: url({{ (articles|first).image.path }})"></a>
+                                <a href="{{ 'articles'|page({id: (articles|first).id }) }}" style="background-image: url({{ (articles|first).image.path }})"></a>
                             </div>
                             <div class="news-article-content">
                                 <div class="news-article-captions">
                                     <span class="news-article__category">ГЛАВНОЕ</span>
                                     <small class="news-article__caption">{{ (articles|first).formating_date }}</small>
                                 </div>
-                                <h1 class="news-article__title"><a href="{{ 'articles'|page({id: (articles|first).id }) }}">{{ (articles|first).title }}</a></h1>
+                                <h1 class="news-article__title"><a href="{{ 'articles'|page({id: (articles|first).id }) }}"> {{ (articles|first).title |length > 109 ? (articles|first).title|slice(0, 109) ~ '...' : (articles|first).title }}</a></h1>
+
                             </div>
                         </article>
                     </div>
@@ -159,7 +160,7 @@
 
 
                 </div>
-                <a class="main__all-view-link" href="">
+                <a class="main__all-view-link" href="/articles">
                     Другие новости
                     <svg role="img" class="icon">
                         <use xlink:href="{{ 'assets/images/icons.svg#arrow-right-2'  | theme }}"></use>

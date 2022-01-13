@@ -1,9 +1,13 @@
 items:
     -
         title: Главная
+        nesting: null
         type: url
         url: /
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -36,9 +40,13 @@ items:
             isExternal: '0'
     -
         title: 'Муниципальные правовые акты'
+        nesting: null
         type: url
         url: /municipal
         code: municipal
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: nav-module-dropdown_center
@@ -165,8 +173,10 @@ items:
         title: 'Бюджет для граждан'
         nesting: 1
         type: static-page
+        url: null
         code: ''
         reference: byudzhet-dlya-grazhdan
+        cmsPage: null
         replace: 0
         viewBag:
             isHidden: '0'

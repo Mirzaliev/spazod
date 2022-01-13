@@ -9,6 +9,10 @@ navigation:
         url: mirzalievarsen/azadogli/articlecontroller
         icon: icon-newspaper-o
         sideMenu:
+            side-menu-item:
+                label: Новости
+                url: mirzalievarsen/azadogli/articlecontroller
+                icon: icon-newspaper-o
             side-menu-item2:
                 label: Категории
                 url: mirzalievarsen/azadogli/articlecategorycontroller
@@ -18,6 +22,10 @@ navigation:
         url: mirzalievarsen/azadogli/documentcontoroller
         icon: icon-file-text
         sideMenu:
+            side-menu-item2:
+                label: Документы
+                url: mirzalievarsen/azadogli/documentcontoroller
+                icon: icon-file
             side-menu-item:
                 label: Разделы
                 url: mirzalievarsen/azadogli/docscategorycontroller
@@ -26,3 +34,8 @@ navigation:
         label: Обращения
         url: mirzalievarsen/azadogli/feedbackcontroller
         icon: icon-bullhorn
+        sideMenu:
+            side-menu-item:
+                label: Обращения
+                url: /
+                icon: icon-bullhorn

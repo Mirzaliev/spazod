@@ -2023,8 +2023,7 @@ section.index--last-docs .main--document-info {
    list-style: none;
 }
 .structure ul li::marker {
-     list-style: none;
-     display: none;
+     color: white;
 }
 .structure ul li li {
   position: relative;
@@ -2651,12 +2650,26 @@ p {
 .main--article-content ul {
   margin-left: 1em;
 }
+
+.main--article-content ul.list-style-none {
+    list-style-type: none;
+}
+
 .main--article-content ul li {
   list-style: inside;
   padding-bottom: 0.4em;
 }
+
+.main--article-content ul li::marker {
+   color: white;
+}
+
 .main--article-content table tr td {
   padding: 0.3em 0;
+}
+
+.main--article-content a:hover {
+    color: #f54e5a;
 }
 .main--article-content blockquote p {
   padding-left: 2rem;

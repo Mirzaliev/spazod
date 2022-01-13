@@ -1,3 +1,4 @@
+{% if articles|length > 0 %}
 <div class="container">
     <h1 class="main__page-header">Новости</h1>
     <section class="news page--news">
@@ -7,12 +8,27 @@
                 <div class="news-every-article">
                     <article class="news-article news-article_with-image">
                         <div class="news-article-image">
-                            <a href="#" style="background-image: url({{ article.image.path }})"></a>
+                            <a href="{{ 'articles'|page({ id:article.id }) }}" style="background-image: url({{ article.image.path }})"></a>
                         </div>
                         <div class="news-article-content">
+                            {% set titleL = article.title|length %}
                             <small class="news-article__caption">{{ article.formating_date }}</small>
-                            <h2 class="news-article__title"><a href="">{{ article.title }}</a></h2>
-                            <p class="news-article__desc"><a href="">{{ (article.content |length > 300 ? article.content|slice(0, 300) ~ '...' : article.content) |striptags|raw }}</a></p>
+                            <h2 class="news-article__title"><a href="{{ 'articles'|page({ id:article.id }) }}">
+                                {% if titleL > 199 %}
+                                    {{ article.title|slice(0, 180) ~ '...'  }}
+                                {% else %}
+                                {{ article.title }}
+                                {% endif %}
+                            </a></h2>
+                            <p class="news-article__desc"><a href="{{ 'articles'|page({ id:article.id }) }}">
+                                {% if titleL > 160 %}
+
+                                {% elseif titleL > 130 %}
+                                    {{ (article.content |length > 80 ? article.content|slice(0, 80) ~ '...' : article.content) |striptags|raw }}
+                                {% elseif titleL > 100 %}
+                                    {{ (article.content |length > 150 ? article.content|slice(0, 150) ~ '...' : article.content) |striptags|raw }}
+                                {% endif %}
+                            </a></p>
                         </div>
                     </article>
                 </div>
@@ -22,3 +38,6 @@
         </div>
     </section>
 </div>
+{% else %}
+    {% partial "site/404" %}
+{% endif %}

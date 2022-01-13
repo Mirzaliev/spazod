@@ -1,6 +1,7 @@
 <?php namespace MirzalievArsen\Azadogli\Components;
 
 use Cms\Classes\ComponentBase;
+use Illuminate\Support\Facades\Redirect;
 use MirzalievArsen\Azadogli\Models\Article as ArticleModel;
 
 class Article extends ComponentBase
@@ -38,7 +39,7 @@ class Article extends ComponentBase
         if($article){
             return $article;
         }
-        return false;
+        return Redirect::back();
     }
 
     protected function getAllArticles(){

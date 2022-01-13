@@ -2,3 +2,8 @@ columns:
     title:
         label: Заголовок
         type: text
+        width: 50%
+    created_at:
+        label: 'Дата создания'
+        type: datetime
+        sortable: true
